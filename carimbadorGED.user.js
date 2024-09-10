@@ -14,7 +14,7 @@
 
 var tecs = [
     'EDIVALDO ALVES DA SILVA JUNIOR',
-    'MARIA CAMILA SOUZA OLIVEIRA',
+    'MARCILENE REGINA DA COSTA SILVA MENDONCA',
     'SILVANIA LOPES DE ARAUJO',
     'VERA LUCIA VIEIRA DA SILVA',
     'WENDEL VIEIRA DE OLIVEIRA'
@@ -39,7 +39,7 @@ var tecs = [
         var searchText1 = "Secretário(a)";
         var searchText2 = "Diretor(a)";
         var secretario = " LUCAS DE SOUZA MONTEIRO \r\n Secretário Escolar \r\n Portaria nº1.677/2023/GS/SEDUC/MT ";
-        var diretor = " CLAUDINEI ANTONIO BOLOGNEZ \r\n Diretor Escolar \r\n Portaria nº00805/2024/GS/SEDUC/MT ";
+        var diretor = " RODRIGO LEANDRO LEMES GONÇALVES \r\n Diretor Escolar \r\n Portaria nº1.678/2023/GS/SEDUC/MT ";
         var tecnico = TAE+" \r\n Téc. Administrativo Escolar \r\n E.E. Major Otávio Pitaluga ";
         var found;
         var modo;
