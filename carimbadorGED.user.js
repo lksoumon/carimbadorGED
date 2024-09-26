@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Carimbador GED
 // @namespace    http://tampermonkey.net/
-// @version      3.0
+// @version      3.1
 // @description  try to take over the world!
 // @author       Lucas Monteiro
 // @require https://code.jquery.com/jquery-3.6.0.min.js
