@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Carimbador GED
 // @namespace    http://tampermonkey.net/
-// @version      3.2
+// @version      3.3
 // @description  try to take over the world!
 // @author       Lucas Monteiro
 // @require https://code.jquery.com/jquery-3.6.0.min.js
@@ -13,11 +13,13 @@
 // ==/UserScript==
 
 var tecs = [
+    'CARLOS VAGNER MARTINS PAIXAO',
     'EDIVALDO ALVES DA SILVA JUNIOR',
+    'LEANDRO JUNIOR PIRES AGUIAR',
     'MARIA CAMILA SOUZA OLIVEIRA',
-    'SILVANIA LOPES DE ARAUJO',
-    'VERA LUCIA VIEIRA DA SILVA',
-    'WENDEL VIEIRA DE OLIVEIRA'
+    'LEANDRO JUNIOR PIRES AGUIAR',
+    'MARCELO RODRIGUES DA COSTA',
+    'VERA LUCIA VIEIRA DA SILVA'
 ];
 
 (function() {
