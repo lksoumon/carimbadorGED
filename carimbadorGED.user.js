@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Carimbador GED
 // @namespace    http://tampermonkey.net/
-// @version      3.3
+// @version      3.4
 // @description  try to take over the world!
 // @author       Lucas Monteiro
 // @require https://code.jquery.com/jquery-3.6.0.min.js
@@ -166,9 +166,10 @@ var tecs = [
     subMenu.style.borderRadius = '5px';
     subMenu.style.padding = '5px';
     subMenu.style.zIndex = '9999';
+    subMenu.style.width = '150px'; // Define a largura da div
 
     // Cria os cinco botões do submenu
-    for (var i = 1; i <= 5; i++) {
+    for (var i = 1; i <= tecs.length; i++) {
         (function(nome) {
             nome = tecs[i-1];
         var subButton = document.createElement('button');
