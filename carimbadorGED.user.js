@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Carimbador GED
 // @namespace    http://tampermonkey.net/
-// @version      3.4
+// @version      3.5
 // @description  try to take over the world!
 // @author       Lucas Monteiro
 // @require https://code.jquery.com/jquery-3.6.0.min.js
@@ -18,7 +18,7 @@ var tecs = [
     'LEANDRO JUNIOR PIRES AGUIAR',
     'MARIA CAMILA SOUZA OLIVEIRA',
     'MARCELO RODRIGUES DA COSTA',
-    'VERA LUCIA VIEIRA DA SILVA'
+    'MIRELLA AGUILAR ARAUJO'
 ];
 
 (function() {
