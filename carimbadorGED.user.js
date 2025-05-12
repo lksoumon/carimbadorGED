@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Carimbador GED
 // @namespace    http://tampermonkey.net/
-// @version      3.5
+// @version      3.61
 // @description  try to take over the world!
 // @author       Lucas Monteiro
 // @require https://code.jquery.com/jquery-3.6.0.min.js
@@ -40,7 +40,7 @@ var tecs = [
         var searchText1 = "Secretário(a)";
         var searchText2 = "Diretor(a)";
         var secretario = " LUCAS DE SOUZA MONTEIRO \r\n Secretário Escolar \r\n Portaria nº1.677/2023/GS/SEDUC/MT ";
-        var diretor = " RODRIGO LEANDRO LEMES GONÇALVES \r\n Diretor Escolar \r\n Portaria nº1.678/2023/GS/SEDUC/MT ";
+        var diretor = " ANA PATRICIA DOS SANTOS \r\n Diretora Escolar \r\n Portaria SEDUC/00421/2025 ";
         var tecnico = TAE+" \r\n Téc. Administrativo Escolar \r\n E.E. Major Otávio Pitaluga ";
         var found;
         var modo;
