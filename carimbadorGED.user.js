@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Carimbador GED
 // @namespace    http://tampermonkey.net/
-// @version      3.62
+// @version      3.63
 // @description  try to take over the world!
 // @author       Lucas Monteiro
 // @require https://code.jquery.com/jquery-3.6.0.min.js
@@ -12,13 +12,16 @@
 // @downloadURL  https://github.com/lksoumon/carimbadorGED/raw/main/carimbadorGED.user.js
 // ==/UserScript==
 
+var tramite = "Autorização: aguardando publicação - processo nº826/2025 CEE/MT."
+
 var tecs = [
     'CARLOS VAGNER MARTINS PAIXAO',
     'EDIVALDO ALVES DA SILVA JUNIOR',
     'LEANDRO JUNIOR PIRES AGUIAR',
     'MARIA CAMILA SOUZA OLIVEIRA',
     'MARCELO RODRIGUES DA COSTA',
-    'MIRELLA AGUILAR ARAUJO'
+    'MIRELLA AGUILAR ARAUJO',
+    //'VERA LUCIA VIEIRA DA SILVA'
 ];
 
 (function() {
@@ -27,7 +30,23 @@ var tecs = [
     //var matchingElement = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
     //console.log(matchingElement);
     //matchingElement.textContent = "New Span content";
+function EmTramite() {
+    var aTags = document.getElementsByTagName("span");
+    for (var i = 0; i < aTags.length; i++) {
 
+                if (aTags[i].textContent.trim() == "Autorização:") {
+                    console.log(aTags[i]);
+                    aTags[i].setAttribute('style', 'white-space: pre;font-size: 10px');
+                    aTags[i].textContent = tramite;
+                }
+
+               if (aTags[i].textContent.trim() == "Data D.O.:") {
+                    console.log(aTags[i]);
+                    aTags[i].setAttribute('style', 'white-space: pre;font-size: 10px');
+                    aTags[i].textContent = '';
+                }
+       }
+}
 
         // Função para simular a função de carimbar
     function carimbar(TAE) {
@@ -40,8 +59,7 @@ var tecs = [
         var searchText1 = "Secretário(a)";
         var searchText2 = "Diretor(a)";
         var secretario = " LUCAS DE SOUZA MONTEIRO \r\n Secretário Escolar \r\n Portaria nº1.677/2023/GS/SEDUC/MT ";
-        var diretor = " Rodrigo Leandro Lemes Gonçalves \r\n Diretor Escolar \r\n Portaria nº1.678/2023/GS/SEDUC/MT ";
-        //var diretor = " ANA PATRICIA DOS SANTOS \r\n Diretora Escolar \r\n Portaria SEDUC/00421/2025 ";
+        var diretor = " RODRIGO LEANDRO LEMES GONÇALVES \r\n Diretor Escolar \r\n Portaria nº1.678/2023/GS/SEDUC/MT ";
         var tecnico = TAE+" \r\n Téc. Administrativo Escolar \r\n E.E. Major Otávio Pitaluga ";
         var found;
         var modo;
@@ -76,6 +94,7 @@ var tecs = [
                     aTags[i].setAttribute('style', 'white-space: pre;font-size: 12px');
                     aTags[i].textContent = tecnico;
                 }
+
             }
 
             if(modo == 'escolaridade'){
@@ -122,7 +141,7 @@ var tecs = [
     carimbo.style.textAlign = 'center'; // Centraliza o texto horizontalmente
 
     // Adiciona as informações ao carimbo
-    carimbo.innerHTML = 'ESTADO DE MATO GROSSO<br>Secretaria de Estado de Educação<br><strong>Escola Estadual de Ensino Médio<br>"MAJOR OTÁVIO PITALUGA"</strong><br>Email: escola.10995@edu.mt.gov.br<br>Avenida Amazonas, 789 - Fone:66 3022-2196<br>Rondonópolis - Mato Grosso'; // Atualize com as informações desejadas
+    carimbo.innerHTML = 'REPÚBLICA FEDERATIVA DO BRASIL<br>ESTADO DE MATO GROSSO<brSECRETARIA DE ESTADO DE EDUCAÇÃO<br><br><strong>EE MAJOR OTÁVIO PITALUGA</strong><br>Decreto de Criação nº 1887 D.O. 07/03/1974<br>Email: escola.10995@edu.mt.gov.br<br>Avenida Amazonas, 789 - Fone:66 3022-2196<br>Rondonópolis - Mato Grosso'; // Atualize com as informações desejadas
 
     // Adiciona o carimbo à página
     document.body.appendChild(carimbo);
@@ -148,13 +167,23 @@ var tecs = [
     floatingMenu.style.border = '1px solid #ccc';
     floatingMenu.style.borderRadius = '5px';
     floatingMenu.style.zIndex = '9999';
+    floatingMenu.style.display = "flex";
+    floatingMenu.style.flexDirection = "column";
+
     floatingMenu.setAttribute('id', 'floating-menu'); // Adiciona um ID ao menu
+
+        // Cria o botão principal "em taemite EJA EEMOP"
+    var tremiteButton = document.createElement('button');
+    tremiteButton.textContent = 'EJA em trâmite (EEMOP)';
+    tremiteButton.addEventListener('click', EmTramite);
+    floatingMenu.appendChild(tremiteButton);
 
     // Cria o botão principal "Carimbo Digital"
     var mainButton = document.createElement('button');
     mainButton.textContent = 'Carimbo Digital';
     mainButton.addEventListener('click', toggleSubMenu);
     floatingMenu.appendChild(mainButton);
+
 
     // Cria o submenu
     var subMenu = document.createElement('div');
