@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Carimbador GED
 // @namespace    http://tampermonkey.net/
-// @version      3.63
+// @version      3.64
 // @description  try to take over the world!
 // @author       Lucas Monteiro
 // @require https://code.jquery.com/jquery-3.6.0.min.js
@@ -141,7 +141,7 @@ function EmTramite() {
     carimbo.style.textAlign = 'center'; // Centraliza o texto horizontalmente
 
     // Adiciona as informações ao carimbo
-    carimbo.innerHTML = 'REPÚBLICA FEDERATIVA DO BRASIL<br>ESTADO DE MATO GROSSO<brSECRETARIA DE ESTADO DE EDUCAÇÃO<br><br><strong>EE MAJOR OTÁVIO PITALUGA</strong><br>Decreto de Criação nº 1887 D.O. 07/03/1974<br>Email: escola.10995@edu.mt.gov.br<br>Avenida Amazonas, 789 - Fone:66 3022-2196<br>Rondonópolis - Mato Grosso'; // Atualize com as informações desejadas
+    carimbo.innerHTML = 'REPÚBLICA FEDERATIVA DO BRASIL<br>ESTADO DE MATO GROSSO<br>SECRETARIA DE ESTADO DE EDUCAÇÃO<br><br><strong>EE MAJOR OTÁVIO PITALUGA</strong><br>Decreto de Criação nº 1887 D.O. 07/03/1974<br>Email: escola.10995@edu.mt.gov.br<br>Avenida Amazonas, 789 - Fone:66 3022-2196<br>Rondonópolis - Mato Grosso'; // Atualize com as informações desejadas
 
     // Adiciona o carimbo à página
     document.body.appendChild(carimbo);
