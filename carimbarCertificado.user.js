@@ -1,12 +1,14 @@
 // ==UserScript==
 // @name         Carimbador GED - certificado
 // @namespace    http://tampermonkey.net/
-// @version      3.93
+// @version      3.94
 // @description  try to take over the world!
 // @author       Lucas Monteiro
 // @require https://code.jquery.com/jquery-3.6.0.min.js
 // @match        http://sigeduca.seduc.mt.gov.br/ged/hwgedhistcertificado.aspx?*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+// @updateURL    https://github.com/lksoumon/carimbadorGED/raw/refs/heads/main/carimbarCertificado.user.js
+// @downloadURL  https://github.com/lksoumon/carimbadorGED/raw/refs/heads/main/carimbarCertificado.user.js
 // @grant        none
 // ==/UserScript==
 
