@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Carimbador GED
 // @namespace    http://tampermonkey.net/
-// @version      3.64
+// @version      3.65
 // @description  try to take over the world!
 // @author       Lucas Monteiro
 // @require https://code.jquery.com/jquery-3.6.0.min.js
@@ -20,7 +20,6 @@ var tecs = [
     'LEANDRO JUNIOR PIRES AGUIAR',
     'MARIA CAMILA SOUZA OLIVEIRA',
     'MARCELO RODRIGUES DA COSTA',
-    'MIRELLA AGUILAR ARAUJO',
     //'VERA LUCIA VIEIRA DA SILVA'
 ];
 
@@ -58,8 +57,8 @@ function EmTramite() {
         var aTags = document.getElementsByTagName("span");
         var searchText1 = "Secretário(a)";
         var searchText2 = "Diretor(a)";
-        var secretario = " LUCAS DE SOUZA MONTEIRO \r\n Secretário Escolar \r\n Portaria nº1.677/2023/GS/SEDUC/MT ";
-        var diretor = " RODRIGO LEANDRO LEMES GONÇALVES \r\n Diretor Escolar \r\n Portaria nº1.678/2023/GS/SEDUC/MT ";
+        var secretario = " LUCAS DE SOUZA MONTEIRO \r\n Secretário Escolar \r\n Portaria nº01162/2025/GS/SEDUC/MT ";
+        var diretor = " RODRIGO LEANDRO LEMES GONÇALVES \r\n Diretor Escolar \r\n Portaria nº01162/2025/GS/SEDUC/MT ";
         var tecnico = TAE+" \r\n Téc. Administrativo Escolar \r\n E.E. Major Otávio Pitaluga ";
         var found;
         var modo;
